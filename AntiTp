@@ -1,4 +1,4 @@
-local Hum = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+local Hum = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") 
 local X = Hum.Position.X
 local Z = Hum.Position.Z
 local LastCFrame

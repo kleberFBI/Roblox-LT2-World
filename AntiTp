@@ -1,0 +1,18 @@
+local Hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+local X = Hum.Position.X
+local Z = Hum.Position.Z
+local LastCFrame
+
+while wait(0.1) do
+    local CX = Hum.Position.X
+    local CZ = Hum.Position.Z
+    if (Vector3.new(CX) - Vector3.new(X)).magnitude < 2.5 and (Vector3.new(CZ) - Vector3.new(Z)).magnitude < 2.5 then
+        X = Hum.Position.X
+        Z = Hum.Position.Z
+        LastCFrame = Hum.CFrame
+        else 
+        Hum.CFrame = LastCFrame
+        X = Hum.Position.X
+        Z = Hum.Position.Z
+    end
+end

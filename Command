@@ -6,7 +6,7 @@ local Action = game.Players:GetPlayers()
 for i = 1,#Action do
     Action[i].Chatted:connect(function(Message)
         if Action[i].Name == "FAKEACCOUNT743" then
-            if string.sub(Message, #Action[i].Name+4, #Action[i].Name+4 + 3) == "/r " then
+            if string.sub(Message, #Action[i].Name+4, #Action[i].Name+4 + 4) == "/r " then
             Chat(string.sub(Message, #Action[i].Name+4, #Message))
             elseif string.sub(Message, 1, 3) == "/r " then
             Chat(string.sub(Message, 1, #Message))
@@ -21,7 +21,7 @@ game.Players.PlayerAdded:connect(function(Plr)
             if string.sub(Message, #Action[i].Name+4, #Action[i].Name+4 + 3) == "/r " then
                 Chat(string.sub(Message, #Action[i].Name+4, #Message))
                 elseif string.sub(Message, 1, 3) == "/r " then
-                Chat(string.sub(Message, 1, #Message))
+                Chat(string.sub(Message, 4, #Message))
             end
         end
     end)

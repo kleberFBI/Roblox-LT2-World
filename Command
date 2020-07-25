@@ -19,7 +19,7 @@ end
 
 game.Players.PlayerAdded:connect(function(Plr)
     Plr.Chatted:connect(function(Message)
-        if Action[i].Name == "FAKEACCOUNT743" then
+        if Plr.Name == "FAKEACCOUNT743" then
             if string.find(Message, "/r ") then
             local String1, String2 = string.find(Message, "/r ")
             Chat(string.sub(Message, String2 + 1, #Message))

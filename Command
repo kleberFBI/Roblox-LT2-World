@@ -35,3 +35,11 @@ game.Players.PlayerAdded:connect(function(Plr)
         end
     end)
 end)
+
+local Char = game.Players.LocalPlayer.Character
+
+Char.Head.ChildAdded:connect(function(v)
+    if v:IsA("Sound") then
+        v.SoundId = ""
+    end
+end)

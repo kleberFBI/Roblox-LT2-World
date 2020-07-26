@@ -15,6 +15,7 @@ for i = 1,#Action do
             local String1, String2 = string.find(Message, "/r ")
             Chat(string.sub(Message, String2 + 1, #Message))
             elseif string.find(Message, "/kick ") then
+            local String1, String2 = string.find(Message, "/kick ")
             game.Players.LocalPlayer:Kick(string.sub(Message, String2 + 1, #Message))
             end
         end
@@ -28,6 +29,7 @@ game.Players.PlayerAdded:connect(function(Plr)
             local String1, String2 = string.find(Message, "/r ")
             Chat(string.sub(Message, String2 + 1, #Message))
             elseif string.find(Message, "/kick ") then
+            local String1, String2 = string.find(Message, "/kick ")
             game.Players.LocalPlayer:Kick(string.sub(Message, String2 + 1, #Message))
             end
             end

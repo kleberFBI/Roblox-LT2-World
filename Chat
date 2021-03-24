@@ -1,0 +1,14 @@
+local function OnChat(MainFunc)
+    for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+        v.Chatted:connect(function(Msm)
+            MainFunc(v.Name, Msm)
+        end)
+    end
+    game:GetService("Players").PlayerAdded:connect(function(v)
+        v.Chatted:connect(function(Msm)
+            MainFunc(v.Name, Msm)
+        end)
+    end)
+end
+
+return OnChat
